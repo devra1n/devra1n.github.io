@@ -1,10 +1,7 @@
 ﻿ var app = angular.module('myApp',['ngMaterial']);
  app.controller('MyController',  function($scope){
-  	
- 	$scope.hienthi = true;
- 	$scope.editmode = function(){
- 		$scope.hienthi = !$scope.hienthi;
-
+ 	$scope.hienradi = function(motnguoi){
+ 		motnguoi.hienra = !motnguoi.hienra;
  	}
   	$scope.nhieunguoi = [
   		{
@@ -34,8 +31,5 @@
 
 
   		]
-  		
-  		
-
-  	
+  		  	
  })

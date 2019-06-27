@@ -19,8 +19,8 @@
 				</div>
 
 
-				<div ng-repeat="motnguoi in nhieunguoi">
-					<div class="card ksua" ng-show="!hienthi">
+				<div ng-repeat="motnguoi in nhieunguoi" ng-init="motnguoi.hienra=true">
+					<div class="card kedit" ng-show="!motnguoi.hienra">
 						<div class="card-header">
 							<p>Thông tin của: <input type="text" class="form-control" ng-model="motnguoi.name"></p>
 						</div>
@@ -28,15 +28,15 @@
 	 						<b>Tuổi: </b><input type="text" class="form-control" ng-model="motnguoi.age"><br>
 	 						<b>Facebook: </b><input type="text" class="form-control" ng-model="motnguoi.facebook"><br>
 	 						<b>Sdt: </b><input type="text" class="form-control" ng-model="motnguoi.sdt"><br>
-	 						<b class="float-xs-right btn btn-outline-danger btn-block" ng-click="editmode()">Lưu</b>
+	 						<b class="float-xs-right btn btn-outline-danger btn-block" ng-click="hienradi(motnguoi)">Lưu</b>
 	 					</div>
 
 	 				</div>
 
-					<div class="card" ng-show="hienthi">
+					<div class="card" ng-show="motnguoi.hienra">
 						<div class="card-header">
 							<b class="float-xs-right">
-								<i class="fa fa-pencil" ng-click="editmode()"></i>
+								<i class="fa fa-pencil" ng-click="hienradi(motnguoi)"></i>
 							</b>
 							<p>Thông tin của: {{motnguoi.name}}</p>
 						</div>

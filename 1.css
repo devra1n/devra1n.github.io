@@ -1,0 +1,12 @@
+*{margin: 0; padding: 0;}
+
+._1tin {
+    border-bottom: 1px solid gray;
+    padding: 10px 0px;
+}  
+.luoi ._1tin {
+	width: 31%;
+	margin-right: 2%;
+	float: left;
+	height: 250px;
+}

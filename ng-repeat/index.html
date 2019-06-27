@@ -17,10 +17,27 @@
 					<p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
 					<hr class="m-y-md">
 				</div>
+
+
 				<div ng-repeat="motnguoi in nhieunguoi">
-					<div class="card">
-						<b class="float-xs-right pr-1"><i class="fa fa-pencil"></i></b>
+					<div class="card ksua" ng-show="!hienthi">
 						<div class="card-header">
+							<p>Thông tin của: <input type="text" class="form-control" ng-model="motnguoi.name"></p>
+						</div>
+	 					<div class="card-block">
+	 						<b>Tuổi: </b><input type="text" class="form-control" ng-model="motnguoi.age"><br>
+	 						<b>Facebook: </b><input type="text" class="form-control" ng-model="motnguoi.facebook"><br>
+	 						<b>Sdt: </b><input type="text" class="form-control" ng-model="motnguoi.sdt"><br>
+	 						<b class="float-xs-right btn btn-outline-danger btn-block" ng-click="editmode()">Lưu</b>
+	 					</div>
+
+	 				</div>
+
+					<div class="card" ng-show="hienthi">
+						<div class="card-header">
+							<b class="float-xs-right">
+								<i class="fa fa-pencil" ng-click="editmode()"></i>
+							</b>
 							<p>Thông tin của: {{motnguoi.name}}</p>
 						</div>
 	 					<div class="card-block">
